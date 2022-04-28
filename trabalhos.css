@@ -1,0 +1,217 @@
+.body{
+    position: relative;
+    width: 1366px;
+    height: 1701px;
+
+    background: #FFFFFF;
+}
+
+
+/* side-menu */
+
+.side-menu{
+    position: absolute;
+    width: 220px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* side-bar */
+
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    height: 536px;
+    left: 0%;
+    right: 0%;
+    top: 0px;
+}
+
+#nome-evento{
+    position: static;
+    width: 220px;
+    height: 68px;
+    left: 0px;
+    top: 0px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+}
+
+#textoSlaca{
+    position: relative;
+    left: 9.09%;
+    right: 10%;
+    top: 20%;
+    bottom: 0%;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#logoSlaca{
+    position: static;
+    width: 220px;
+    height: 258px;
+    left: 0px;
+    top: 68px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.menu-itens{
+    position: static;
+    width: 220px;
+    height: 33px;
+    left: 0px;
+    text-decoration: none;
+    border-bottom: 2px solid #E7E7E7;
+}
+
+.texto-menu-itens{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #725C5C;
+
+}
+
+.menu-ativo{
+    background: #FDF1EB;
+}
+
+.menu-ativo::before{
+    content: '.';
+    background: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+    color: transparent;
+    position: absolute;
+    font-size: 29px;
+}
+
+
+#menu-apresentacao{
+    top: 326px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-apresentacao{
+    position: relative;
+    left: 10.91%;
+    right: 44.09%;
+    top: 20%;
+    bottom: 25.71%;
+}
+
+
+#menu-comites{
+    top: 361px;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-comites{
+    position: relative;
+    left: 10.91%;
+    right: 62.73%;
+    top: 20%;
+    bottom: 25.71%;
+}
+
+#menu-autores{
+    top: 396px;
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-autores{
+    position: relative;
+    left: 10.91%;
+    right: 64.09%;
+    top: 20%;
+    bottom: 25.71%;
+}
+
+#menu-eixosTematicos{
+    top: 431px;
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-eixosTematicos{
+    position: relative;
+    left: 10.91%;
+    right: 39.09%;
+    top: 20%;
+    bottom: 25.71%;
+}
+
+#menu-trabalhos{
+    top: 466px;
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-trabalhos{
+    position: relative;
+    left: 10.91%;
+    right: 54.55%;
+    top: 20%;
+    bottom: 25.71%;
+}
+
+#menu-contato{
+    top: 501px;
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+#texto-contato{
+    position: relative;
+    left: 10.91%;
+    right: 62.73%;
+    top: 20%;
+    bottom: 25.71%;
+}
