@@ -2,6 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 :root{
     --orange: #ED7839;
     --light-orange: #FDF1EB;
@@ -13,14 +18,14 @@
 /* side-menu */
 
 .side-menu{
-    position: absolute;
-    width: 250px;
+    position: fixed;
+    width: 18%;
     left: 0px;
     top: 0px;
     bottom: 0px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-
+    order: 0;
 }
 
 /* side-bar */
@@ -31,21 +36,22 @@
     align-items: center;
     position: relative;
     height: 68px;
+    width: 100%;
 }
 
-/*  */
+
+
+/* Tipo */
 
 #nome-evento{
     position: relative;
-    width: 100%;
     height: 100%;
     flex: none;
     order: 0;
     flex-grow: 0;
     background: var(--gradient-orange);
-    display: block;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -57,8 +63,9 @@
     font-size: 30px;
     color: #FFFFFF;
     top: 20%;
-    left: 15%;
 }
+
+
 
 /* logo */
 
@@ -70,6 +77,16 @@
     flex-grow: 0;
     text-align: center;
 }
+
+#logoSlaca img{
+    object-fit: contain;
+    max-height: 220px;
+    max-width: 258px;
+    width: 100%;
+    height: 100%;
+} 
+
+
 
 /* Opções do menu */
 
@@ -165,4 +182,144 @@
 #texto-contato{
     position: relative;
 }
+
+
+/* Header */
+
+#titulo{
+    position: relative;
+    display: block;
+    width: 60%;
+    margin-left: 36px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+#titulo div{
+    position: relative;
+    text-align: start;
+}
+
+#titulo h5, h1{
+    margin: 0;
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: var(--light-brown);
+}
+
+#titulo h5{
+    font-size: 14px;
+}
+
+#titulo h1{
+    font-size: 22px;
+}
+
+#selecao-idioma{
+    position: relative;
+    min-width: 110px;
+    text-align: center;
+    margin-top: 17px;
+}
+
+#idioma{
+    height: 34px;
+    width: 97px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: var(--light-orange);
+    text-align: center;
+    cursor: pointer;
+    appearance: none;
+    font-family: 'Quicksand';
+    font-weight: 400;
+}
+
+#selecao-idioma::after{
+    content: url(/imagens/dropdown.svg);
+    position: relative;
+    left: -23px;
+    cursor: pointer;
+}
+
+#globo-idioma{
+    position: absolute;
+    top: 5px;
+    left: 6px;
+}
+
+#email-usuario{
+    position: relative;
+    min-width: 190px;
+    text-align: end;
+    font-family: 'Quicksand';
+    font-weight: 400;
+    margin-right: 20px;
+}
+
+#email-usuario p:nth-child(1){
+    margin-top: 13px;
+    margin-bottom: 1px;
+    font-size: 17px;
+}
+
+#email-usuario p:nth-child(2){
+    margin-top: 0px;
+    margin-bottom: 17px;
+    font-size: 12px;
+}
+
+#foto-perfil{
+    position: relative;
+    text-align: center;
+    top: 17px;
+    min-width: 50px;
+    margin-right: 5px;
+}
+
+#foto-perfil img{
+    border-radius: 50%;
+}
+
+#foto-perfil::after{
+    content: '2';
+    background-color: #F85959;
+    border-left: 3px solid #F85959;
+    border-right: 3px solid #F85959;
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Roboto';
+    position: relative;
+    top: -42px;
+    left: 12px;
+}
+
+/* ----------- Disposição do conteúdo principal da página ------------- */
+
+#body{
+    display: flex;
+}
+
+#conteudo-principal{
+    position: relative;
+    width: 82%;
+    left: 18%;
+}
+
+#content{
+    position: relative;
+    top: 900px;
+}
+
+header{
+    display: flex;
+    height: 69px;
+    position: relative;
+    background-color: var(--light-orange);
+    width: 100%;
+}
+
 
