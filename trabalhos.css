@@ -88,7 +88,8 @@
     font-size: 15px;
     line-height: 19px;
     color: #725C5C;
-
+    left: 35px;
+    top: 10px;
 }
 
 .menu-ativo{
@@ -112,10 +113,6 @@
 
 #texto-apresentacao{
     position: relative;
-    left: 10.91%;
-    right: 44.09%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
 
@@ -127,10 +124,6 @@
 
 #texto-comites{
     position: relative;
-    left: 10.91%;
-    right: 62.73%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
 #opcao-autores{
@@ -141,10 +134,6 @@
 
 #texto-autores{
     position: relative;
-    left: 10.91%;
-    right: 64.09%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
 #opcao-eixosTematicos{
@@ -155,10 +144,6 @@
 
 #texto-eixosTematicos{
     position: relative;
-    left: 10.91%;
-    right: 39.09%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
 #opcao-trabalhos{
@@ -169,10 +154,6 @@
 
 #texto-trabalhos{
     position: relative;
-    left: 10.91%;
-    right: 54.55%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
 #opcao-contato{
@@ -183,9 +164,5 @@
 
 #texto-contato{
     position: relative;
-    left: 10.91%;
-    right: 62.73%;
-    top: 20%;
-    bottom: 25.71%;
 }
 
