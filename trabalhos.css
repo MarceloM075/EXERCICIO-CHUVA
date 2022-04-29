@@ -184,9 +184,10 @@
 }
 
 
+
 /* Header */
 
-#titulo{
+#cabecalho{
     position: relative;
     display: block;
     width: 60%;
@@ -195,23 +196,23 @@
     margin-right: 10px;
 }
 
-#titulo div{
+#cabecalho div{
     position: relative;
     text-align: start;
 }
 
-#titulo h5, h1{
+#cabecalho h5, h1{
     margin: 0;
     font-family: 'Roboto';
     font-weight: 400;
     color: var(--light-brown);
 }
 
-#titulo h5{
+#cabecalho h5{
     font-size: 14px;
 }
 
-#titulo h1{
+#cabecalho h1{
     font-size: 22px;
 }
 
@@ -278,8 +279,15 @@
     margin-right: 5px;
 }
 
+#foto-perfil div{
+    width: 100%;
+}
+
 #foto-perfil img{
     border-radius: 50%;
+    margin-right: 20px;
+    right: 20px;
+    margin-left: 5px;
 }
 
 #foto-perfil::after{
@@ -294,8 +302,10 @@
     font-family: 'Roboto';
     position: relative;
     top: -42px;
-    left: 12px;
+    left: 5px;
 }
+
+
 
 /* ----------- Disposição do conteúdo principal da página ------------- */
 
@@ -309,9 +319,10 @@
     left: 18%;
 }
 
-#content{
+#conteudo{
     position: relative;
-    top: 900px;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -320,6 +331,215 @@ header{
     position: relative;
     background-color: var(--light-orange);
     width: 100%;
+    gap: 10px;
+}
+
+#divisao-titulo-botoes{
+    display: flex;
+    position: relative;
+    gap: 31px;
+    height: 64px;
+    width: calc(100% - 36px - 45px);
+    margin-left: 36px;
+    margin-top: 20px;
+    margin-right: 45px;
+}
+
+#divisao-video-detalhes{
+    display: flex;
+    position: relative;
+    margin-left: 36px;
+    gap: 31px;
+    flex-direction: row;
+    margin-top: 19px;
+    max-height: 80%;
+    margin-right: 45px;
+    margin-bottom: 5px;
+    max-height: 750px;
+}
+
+#resumo{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 36px;
+    margin-right: 45px;
 }
 
 
+
+/* Conteúdo */
+
+#conteudo h1{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--orange);
+    
+}
+
+#titulo{
+    order: 0;
+    position: relative;
+    width: 80%;
+}
+
+#botoes{
+    order: 1;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    float: right;
+}
+
+#direita-titulo{
+    position: relative;
+    width: 30%;
+    align-content: center;
+    text-align: center;
+}
+
+#teste{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#pergunta{
+    position: relative;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--orange);
+    margin-top: 12px;
+    order: 2;
+}
+
+#player-video{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    max-height: 620px;
+}
+
+#player-video img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-height: 620px;
+}
+
+#player-video::before{
+    content: '';
+    background: rgba(141, 53, 6, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    z-index: 2;
+    max-width: 1106px;
+}
+
+#detalhes{
+    width: 32%;
+    border: 1px solid #ECECEC;
+    border-radius: 3px;
+    overflow-y: scroll;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#topico{
+    padding-top: 12px;
+    background-color: var(--light-orange);
+    width: calc(100% - 15px) ;
+    height: 33px;
+    padding-left: 15px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    color: #4E4E4E;
+}
+
+#texto-detalhes{
+    font-family: 'Quicksand';
+    color: #5C5C5C;
+    font-size: 12px;
+    width: 100%;
+}
+
+#topicos-detalhes{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.bold{
+    font-size: 12px;
+    color: #5C5C5C;
+    font-weight: bold;
+}
+
+#autores-detalhes{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#os-autores{
+    font-size: 14px;
+}
+
+#legenda-detalhes{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 27px;
+}
+
+#resumo{
+    position: relative;
+    display: block;
+}
+
+@media (max-width: 1360px){
+    #detalhes{
+       max-height: 412px;
+    }
+}
+
+@media (max-width: 1280px){
+    #detalhes{
+       max-height: 396px;
+       overflow: hidden;
+       overflow-y: scroll;
+    }  
+}
+
+@media (max-width: 1200px){
+    #detalhes{
+        max-height: 369px;
+     }
+}
+
+@media (max-width: 1152px){
+    #detalhes{
+        max-height: 352px;
+     }
+}
+
+@media (max-width: 1024px){
+    #detalhes{
+        max-height: 308px;
+     }
+}
+@media (max-width: 1000px) {
+    #divisao-video-detalhes{
+        flex-direction: column;
+    }
+    
+    #detalhes{
+        width: 100%;
+    }
+}
