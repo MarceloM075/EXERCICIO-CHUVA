@@ -61,6 +61,10 @@ const botao = document.getElementById('botao-criar-topico')
 const icones = document.getElementById('icones-box-discussoes')
 const textoEstimulo = document.getElementById('texto-estimulo-comentario')
 const hr = document.querySelector('.hr')
+const criarTopico = document.getElementById('criar-topico')
+let trocaStyleIdeiasDuvidas = textoIdeiasDuvidas.style
+let hrStyle = hr.style
+let botaoStyle = botao.style
 
 function criarNovoTopico(){
     textoIdeiasDuvidas.innerHTML = 'Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!<br>'
@@ -69,7 +73,20 @@ function criarNovoTopico(){
     botao.style.display = 'none'
     hr.style = 'top: 0px;'
 
-    textoEstimulo.innerHTML = '<div class="criando-topico"><span class="titulo-assunto" style="text-align: left;">Assunto</span><input style="height: 39px; border-radius: 3px; border: 1px solid #CCCCCC; padding-left: 23px;" for="" placeholder="Defina um tópico sucinto para notificar os autores..."></input> <span class="titulo-assunto" style="text-align: left; margin: 10px 0px 4px; 0px;">Conteúdo</span>  <textarea style="max-height: 90px; resize: none; margin-bottom: 0px; border-radius: 3px; border: 1px solid #CCCCCC; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;" name="" id="" cols="30" rows="10"></textarea><div id="bold-italic-botao" style="margin-bottom: 15px; background: #EAF1F2; border-radius: 3px; border: 1px solid #CCCCCC; height: 31px; border-top-left-radius: 0px; border-top-right-radius: 0px;"><span style="float: left; margin-left: 29px; margin-top: 4px;"><img src="/imagens/bold.png" alt=""> <img style="margin-left: 30px;" src="/imagens/italic.png" alt=""></span><button style="height:32px; width: 20%; float: right; border: 0px; border-bottom-right-radius: 4px; background: var(--gradient-orange); color: white;">Enviar</button></div></div>'
+    textoEstimulo.innerHTML = '<div class="criando-topico"><span class="titulo-assunto" style="text-align: left;">Assunto</span><input style="height: 39px; border-radius: 3px; border: 1px solid #CCCCCC; padding-left: 23px;" for="" placeholder="Defina um tópico sucinto para notificar os autores..."></input> <span class="titulo-assunto" style="text-align: left; margin: 10px 0px 4px; 0px;">Conteúdo</span>  <textarea style="padding-left: 15px; padding-top: 5px; max-height: 90px; resize: none; margin-bottom: 0px; border-radius: 3px; border: 1px solid #CCCCCC; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;" name="" id="" cols="30" rows="10"></textarea><div id="bold-italic-botao" style="margin-bottom: 15px; background: #EAF1F2; border-radius: 3px; border: 1px solid #CCCCCC; height: 31px; border-top-left-radius: 0px; border-top-right-radius: 0px;"><span style="float: left; margin-left: 29px; margin-top: 4px;"><img src="/imagens/bold.png" alt=""> <img style="margin-left: 30px;" src="/imagens/italic.png" alt=""></span><button onclick="enviarTopico()" id="botao-enviar" style="height:32px; width: 20%; float: right; border: 0px; border-bottom-right-radius: 4px; background: var(--gradient-orange); color: white;">Enviar</button></div></div>'  
+}
 
-    
+//--------------------------------- BOTAO-ENVIAR -----------------------------------------
+
+
+
+function enviarTopico(){
+    textoIdeiasDuvidas.innerHTML = 'Seu tópico foi enviado com sucesso! :D<br><br>'
+    textoEstimulo.innerHTML = 'Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!<br><br><div style = "margin-bottom: 47px;"><span style = "color: #F48F44; text-decoration-line: underline;">Descubra outros trabalhos!</span></div>'
+    criarTopico.innerHTML = 'criar novo tópico'
+    textoIdeiasDuvidas.style = trocaStyleIdeiasDuvidas
+    botao.style = botaoStyle
+    hr.style = hrStyle
+    document.styleSheets[0].cssRules[80].style.display = 'none'
+    botao.style = 'text-align: center; width: 235px; padding-right: 0;'
 }
