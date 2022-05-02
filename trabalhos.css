@@ -12,6 +12,7 @@
     --light-orange: #FDF1EB;
     --light-brown: #725C5C;
     --dark-grey: #4E4E4E;
+    --border-color: #E7E7E7;
     --gradient-orange: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
 }
 
@@ -116,7 +117,7 @@
     width: 100%;
     height: 38px;
     text-decoration: none;
-    border-bottom: 2px solid #E7E7E7;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .texto-menu-itens{
@@ -687,6 +688,41 @@ header{
     box-shadow: 0;
 }
 
+#novo-topico::before{
+    position: absolute;
+    background: #dddddda6;
+    width: 100%;
+    height: 163px;
+    content: '';
+    left: 0;
+    border-radius: 3px;
+    object-fit: contain;
+    display: none;
+}
+
+#aguardando{
+    position: absolute;
+    top: 70px;
+    left: 35%;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #707070;
+    margin-bottom: 0px;
+}
+
+#aguardando::before{
+    background-image: url(/imagens/confirmação.png);
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    top: -30px;
+    left: 50%;
+}
+
 .criando-topico{
     display: flex;
     flex-direction: column;
@@ -698,12 +734,12 @@ header{
     top: -15px;
     z-index: -2;
     border-radius: 1px;
-    border: 1px solid #E7E7E7;
+    border: 1px solid var(--border-color);
 }
 
 .assuntos{
     margin-top: 15px;
-    border: 1px solid #E7E7E7;
+    border: 1px solid var(--border-color);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     padding: 17px 24px;
@@ -782,6 +818,69 @@ header{
     color: #757575;
 }
 
+.sessao-comentarios{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+.comentario{
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-comentado{
+    text-align: left;
+    margin-left: 23px;
+    margin-bottom: 30px;
+}
+
+.autor-comentario{
+    margin-left: 23px;
+    margin-right: 47px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 12px;
+    color: #5C5C5C;
+}
+
+.nome-autor{
+    float: left;
+}
+
+.tipo-autor{
+    float: right;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--orange);
+}
+
+.tipo-autor::after{
+    background-image: url(/imagens/confirmação\ -\ orange.png);
+    content: '........';
+    position: relative;
+    right: -10px;
+    top: -1px;
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: transparent;
+    top: 2px;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
 footer{
     padding-left: 20px ;
     text-align: start;
@@ -830,6 +929,12 @@ footer{
     font-weight: 900;
     color: #5C5C5C;
 }
+
+
+
+
+
+
 
 @media(max-width: 780px){
     #footer-divisao{
