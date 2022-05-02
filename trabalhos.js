@@ -62,6 +62,11 @@ const icones = document.getElementById('icones-box-discussoes')
 const textoEstimulo = document.getElementById('texto-estimulo-comentario')
 const hr = document.querySelector('.hr')
 const criarTopico = document.getElementById('criar-topico')
+const novoTopico = document.getElementById('novo-topico')
+const sinalCruzBotao = document.styleSheets[0].cssRules[80]
+const blurTopicoNovo = document.styleSheets[0].cssRules[81]
+
+
 let trocaStyleIdeiasDuvidas = textoIdeiasDuvidas.style
 let hrStyle = hr.style
 let botaoStyle = botao.style
@@ -87,6 +92,35 @@ function enviarTopico(){
     textoIdeiasDuvidas.style = trocaStyleIdeiasDuvidas
     botao.style = botaoStyle
     hr.style = hrStyle
-    document.styleSheets[0].cssRules[80].style.display = 'none'
+    sinalCruzBotao.style.display = 'none'
     botao.style = 'text-align: center; width: 235px; padding-right: 0;'
+    novoTopico.innerHTML = '<div class="assuntos" style="filter: blur(6px); box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.6);"> ' + document.getElementById('assunto1').innerHTML + '</div><div id="aguardando">Aguardando feedback dos autores<br><br><span style="margin-bottom: 0px; color: #ED7839; text-decoration-line: underline; font-weight: 400; font-family: "Segoe UI";">Editar tópico</span></div>'
+    blurTopicoNovo.style.display = 'block'
+    
+    
+}
+
+
+//------------------------------- COMENTARIOS -----------------------------------------
+
+
+function comentarios(){
+    const comentariosDeAutores = document.querySelectorAll('[autor]')
+    const visitante = document.querySelectorAll('[visitante]')
+    const sessaoComentarios = document.getElementsByClassName('sessao-comentarios')[0]
+
+    if(sessaoComentarios.style.display === 'none'){
+        sessaoComentarios.style.display = 'block'
+    
+        for(let i = 0; i < visitante.length; i++){
+            visitante[i].style.display = 'none'    
+        }
+    
+        for(let i = 0; i < comentariosDeAutores.length; i++){
+            comentariosDeAutores[i].style = 'background-color: #F8F8F8;'
+        }
+    }else{
+        sessaoComentarios.style.display = 'none'
+    }
+
 }
