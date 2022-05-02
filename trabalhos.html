@@ -74,8 +74,8 @@
                 <div id="titulo">
                     <h1>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</h1>
                 </div>
-                <div id="direita-titulo">
-                    <div id="teste">
+                <div id="botoes-pergunta-local">
+                    <div id="botoes-pergunta">
                         <div id="botoes">
                             <span id="botao-download"><img src="/imagens/download button.png" alt=""></span>
                             <span id="botao-favorito"><img src="/imagens/favorite button.png" alt=""></span>
@@ -88,7 +88,15 @@
             <div id="divisao-video-detalhes">
                 <div id="player-video">
                     <div id="box-texto-overlay">
-                        <span id="texto-overlay">Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP</span> 
+                        <div id="texto-overlay1">
+                            Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP 
+                        </div>
+                        <div id="texto-overlay2">
+                            <img src="/imagens/round.png" alt="">
+                            <div>
+                                <span id="nome-autor">Beatriz Christiane Melo</span> <br> <span id="faculdade-autor"> FCA / Universidade Estadual de Campinas</span>   
+                            </div> 
+                        </div> 
                     </div>
                 </div>
                 <div id="detalhes">
@@ -116,22 +124,95 @@
                     </div>
                 </div>
             </div>
-            <div id="resumo">
-                <div id="topico-resumo">
+            <div class="box-textos">
+                <div class="box-topico-textos">
                     Resumo
                 </div>
-                <div id="texto-resumo">
+                <div class="box-conteudo-textos" id="texto-resumo">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant...<span id="ver-mais" onclick="expandirResumo()">ver mais</span>
                 </div>
             </div>
-            <div id="discussoes">
-                <div id="topico-discussoes">
-                    Discussoes
+            <div class="box-textos">
+                <div class="box-topico-textos">
+                    Discussões
                 </div>
-                <div id="conteudo-discussoes">
-                    Compartilhe suas ideias ou dúvidas com os autores!
+                <div class="box-conteudo-textos" id="ideias-duvidas-textos">
+                    <span id="texto-ideias-duvidas">Compartilhe suas ideias ou dúvidas com os autores!</span>
+                    <div id="icones-box-discussoes">
+                        <img src="/imagens/icone1.png" alt="">
+                        <img src="/imagens/icone2.png" alt="">
+                        <img src="/imagens/icone3.png" alt="">
+                    </div>
+                    <span id="texto-estimulo-comentario">Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</span>
+                    <div id="botao">
+                        <button id="botao-criar-topico" onclick="criarNovoTopico()"><span id="criar-topico">criar tópico</span></button>
+                    </div> 
+                    <hr class="hr">
+                    <div class="assuntos">
+                        <div class="titulo-assunto">
+                            Assunto da pergunta aparece aqui
+                        </div>
+                        <div class="autor-assunto">
+                            Carlos Henrique Santos
+                        </div>
+                        <div class="assunto-comentado">
+                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                        </div>
+                        <div class="feedback">
+                            <div class="decoration">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                            </div>
+                            <div class="botao-like">
+                                <img src="/imagens/button bg.png" alt="">
+                            </div>
+                            <div class="quantidade-likes-respotas">
+                                1 like &nbsp;&nbsp; 1 resposta
+                            </div>
+                        </div>
+                    </div>
+                    <div class="assuntos">
+                        <div class="titulo-assunto">
+                            Assunto da pergunta aparece aqui
+                        </div>
+                        <div class="autor-assunto">
+                            Carlos Henrique Santos
+                        </div>
+                        <div class="assunto-comentado">
+                            Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...
+                        </div>
+                        <div class="feedback">
+                            <div class="decoration">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                                <img src="/imagens/Ellipse 17.png" alt="">
+                            </div>
+                            <div class="botao-like">
+                                <img src="/imagens/button bg.png" alt="">
+                            </div>
+                            <div class="quantidade-likes-respotas">
+                                1 like &nbsp;&nbsp; 1 resposta
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
+            <footer>
+                <hr class="hr">
+                <div id="footer-divisao">
+                    <div id="imagem-logo-galoa">
+                        <img id="logo-galoa" src="/imagens/logo-galoa.png" alt="">
+                        <button class="botao-saiba-mais">Saiba mais</button>
+                    </div>
+                    <div class="texto-footer">
+                        <span>Preservar a memória do evento e ampliar o acesso ao conhecimento científico</span> gerado em eventos é a razão de ser da plataforma Galoá Proceedings.
+                        <br><br>
+                        Os trabalhos publicados aqui têm maior alcance e ficam disponíveis para toda a comunidade científica, mantendo acesso o debate científico fomentado pelos encontros e aumentando o impacto do evento.
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
     <script src="/trabalhos.js"></script>

@@ -15,6 +15,10 @@
     --gradient-orange: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
 }
 
+
+
+
+
 /* side-menu */
 
 .side-menu{
@@ -29,6 +33,10 @@
     min-width: 150px;
 }
 
+
+
+
+
 /* side-bar */
 
 .side-bar{
@@ -39,6 +47,10 @@
     height: 68px;
     width: 100%;
 }
+
+
+
+
 
 
 
@@ -68,6 +80,9 @@
 
 
 
+
+
+
 /* logo */
 
 #logoSlaca{
@@ -86,6 +101,11 @@
     width: 100%;
     height: 100%;
 } 
+
+
+
+
+
 
 
 
@@ -184,6 +204,12 @@
     position: relative;
 }
 
+
+
+
+
+
+
 /* ----------- Disposição do conteúdo principal da página ------------- */
 
 #body{
@@ -235,7 +261,7 @@ header{
     object-fit: cover;
 }
 
-#resumo{
+.box-textos{
     position: relative;
     margin-top: 30px;
     margin-left: 36px;
@@ -244,6 +270,11 @@ header{
     border: 1px solid #ECECEC;
     border-radius: 3px;
 }
+
+
+
+
+
 
 
 /* Header */
@@ -279,7 +310,6 @@ header{
 
 #selecao-idioma{
     position: relative;
-    /* min-width: 110px; */
     text-align: center;
     margin-top: 17px;
 }
@@ -398,14 +428,14 @@ header{
     float: right;
 }
 
-#direita-titulo{
+#botoes-pergunta-local{
     position: relative;
     width: 30%;
     align-content: center;
     text-align: center;
 }
 
-#teste{
+#botoes-pergunta{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -422,6 +452,11 @@ header{
     order: 2;
 }
 
+
+
+
+
+/* VIDEO PLAYER */
 
 #player-video{
     background-image: url(/imagens/dewey1.png);
@@ -446,22 +481,70 @@ header{
 }
 
 #player-video div{
-    font-size: 24px;
     color: #fff;
     position: absolute;
+    font-size: 24px;
     font-family: 'Roboto';
-    font-weight: 900;
+    font-weight: 600;
+    font-style: normal;
     text-align: left;
+    line-height: 25px;
+    letter-spacing: 1.5px;
     padding-left: 32px;
     padding-top: 35px;
     width: 90%;
 }
 
-#texto-overlay{
-    position: absolute;
-    text-align: left;
-    padding-right: 30px;
+#box-texto-overlay{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
 }
+
+#texto-overlay1{
+    position: relative;
+    text-align: left;
+    padding-right: 0px;
+    padding-top: 0;
+    height: 50%;
+    top: 0;
+    left: 0;
+}
+
+#texto-overlay2{
+    position: relative; 
+    height: 50%;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#texto-overlay2 img{
+    object-fit: contain;
+    width: 13%;
+}
+
+#texto-overlay2 div{
+    position: relative;
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 17px;
+}
+
+#nome-autor{
+    font-size: 34px;
+}
+
+#faculdade-autor{
+    font-size: 20px;
+}
+
+
+
+/* SESSÃO DETALHES */
 
 #detalhes{
     position: relative;
@@ -521,9 +604,13 @@ header{
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 27px;
+    font-weight: 200;
 }
 
-#topico-resumo{
+
+/* --------------- RESUMO-DISCUSSÕES ------------------------ */
+
+.box-topico-textos{
     background-color: var(--light-orange);
     height: 35px;
     font-family: 'Roboto';
@@ -535,7 +622,7 @@ header{
     padding-left: 15px;
 }
 
-#texto-resumo{
+.box-conteudo-textos{
     font-family: 'Quicksand';
     font-weight: 400;
     font-size: 14px;
@@ -550,4 +637,208 @@ header{
     color: var(--orange);
     font-weight: 700;
     cursor: pointer;
+}
+
+#ideias-duvidas-textos{
+    text-align: center;
+}
+
+#texto-ideias-duvidas{
+    color: var(--orange);
+    font-size: 18px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+#icones-box-discussoes{
+    margin-top: 27px;
+    margin-bottom: 35px;
+}
+
+#botao-criar-topico{
+    margin-top: 14px;
+    width: 133px;
+    height: 32px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #fff;
+    background: var(--gradient-orange);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border: 1px;
+    border-radius: 4px;
+    text-align: end;
+    padding-right: 13px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+}
+
+#criar-topico::before{
+    background-image: url(/imagens/icon\ -\ criar.png);
+    position: relative;
+    content: '-----';
+    color: transparent;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    left: 3px;
+    top: 1px;
+    box-shadow: 0;
+}
+
+.criando-topico{
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+}
+
+.hr{
+    position: relative;
+    top: -15px;
+    z-index: -2;
+    border-radius: 1px;
+    border: 1px solid #E7E7E7;
+}
+
+.assuntos{
+    margin-top: 15px;
+    border: 1px solid #E7E7E7;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 17px 24px;
+    text-align: start;
+}
+
+.titulo-assunto{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ED7839;
+    line-height: 20px;
+}
+
+.autor-assunto{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    color: #5C5C5C;
+    line-height: 15px;
+    margin-top: 3px;
+}
+
+.assunto-comentado{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4D4D4D;
+    margin-top: 10px;
+}
+
+.feedback{
+    display: flex;
+    margin-top: 11px;
+}
+
+.decoration{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+}
+
+.decoration img{
+    margin: 1.5px 0px;
+}
+
+.decoration img:first-child{
+    margin-top: 3px;
+}
+
+.botao-like{
+    margin-right: 15px;
+}
+
+.botao-like::before{
+    background-image: url(/imagens/green\ apples\ 22.png);
+    position: relative;
+    content: '.....';
+    width: 23px;
+    height: 23px;
+    left: 25px;
+    color: transparent;
+    top: -5px;
+    background-repeat: no-repeat;
+}
+
+.quantidade-likes-respotas{
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #757575;
+}
+
+footer{
+    padding-left: 20px ;
+    text-align: start;
+    padding-right: 45px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#footer-divisao{
+    display: flex;
+    flex-direction: row;
+}
+
+/* .imagem-logo-galoa{
+    object-fit: contain;
+    align-items: center;
+    align-self: center;
+} */
+
+.botao-saiba-mais{
+    width: 90%;
+    position: relative;
+    align-items: center;
+    align-self: center;
+    margin: 0 auto;
+    margin-left: 12px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: #71478E;
+    color: #fff;
+    font-family: 'Quicksand';
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.texto-footer{
+    font-family: 'Quicksand';
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #4D4D4D;
+}
+
+.texto-footer span{
+    font-weight: 900;
+    color: #5C5C5C;
+}
+
+@media(max-width: 780px){
+    #footer-divisao{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 20px;
+    }
+    
+    #logo-galoa{
+        padding-left: 60px;
+    }
 }
