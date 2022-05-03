@@ -9,7 +9,7 @@ function redimensionar(){
     let heightVideoDetalhes = parseFloat(VideoDetalhes.style.height) * 1.786
     let heightMenor = 430 - diferenca / 2
 
-    if(window.innerWidth <= 1366){
+    if(window.innerWidth <= 1366 && window.innerWidth > 1050){
         VideoDetalhes.style = 'height: '+ heightMenor +'px;'
         overlayVideo.style = 'width: ' + heightVideoDetalhes + 'px; content: ""; position: absolute; background: rgba(141, 53, 6, 0.5); height: 100%; object-fit: contain; top: 0;left: 0; border-radius: 3px;'
     }
@@ -23,11 +23,16 @@ function redimensionar(){
         VideoDetalhes.style = 'height: '+ heightMaior +'px;'
     }
 
+    if(window.innerWidth <= 1050 && window.innerWidth >= 640){
+        overlayVideo.style = 'width: ' + 555 + 'px; content: ""; position: absolute; background: rgba(141, 53, 6, 0.5); height: 100%; object-fit: contain; top: 0;left: 0; border-radius: 3px;'
+        VideoDetalhes.style = 'height: '+ heightMenor +'px;'
+    }
+
     textoOverlayVideo.style.maxWidth = overlayVideo.style.width 
 }
 
 window.addEventListener('resize', redimensionar)
-setInterval(redimensionar, 500)
+setInterval(redimensionar, 1000)
 
 
 
@@ -48,7 +53,6 @@ function contrairResumo(){
     textoResumo.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut.  Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum.  Etiam aliquam dictum nisl, vel aliquet enim accumsan sit ametl accumsant... <span id="ver-mais" onclick="expandirResumo()">ver mais</span>'
 }
 
-// expandido.addEventListener('click', contrairResumo)
 
 
 
@@ -123,4 +127,25 @@ function comentarios(){
         sessaoComentarios.style.display = 'none'
     }
 
+}
+
+
+
+
+//------------------------- RETRAIR MENU ------------------------------
+
+
+const sideMenu = document.getElementsByClassName('side-menu')[0]
+const conteudoPrincipal = document.getElementById('conteudo-principal')
+
+function retrairMenu(){
+
+    if (sideMenu.style.display === 'none'){
+        sideMenu.style.display = 'block'
+        conteudoPrincipal.style.left = '18%'
+    }else{
+        sideMenu.style.display = 'none'
+        conteudoPrincipal.style.width = '100%'
+        conteudoPrincipal.style.left = '0'
+    }
 }
